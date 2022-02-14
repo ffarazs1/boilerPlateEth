@@ -12,9 +12,11 @@ class RequestIndex extends Component {
     const requestCount = await campaign.methods.getRequestsCount().call();
     const approversCount = await campaign.methods.approversCount().call();
 
+    //check page 26 of docs, we are calling again and again as solidity cant return 
+    //array of structs
     const requests = await Promise.all(
       Array(parseInt(requestCount))
-        .fill()
+        .fill()//return arrays with indexes
         .map((element, index) => {
           return campaign.methods.requests(index).call();
         })
