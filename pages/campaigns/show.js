@@ -8,6 +8,9 @@ import { Link } from "../../routes";
 
 class CampaignShow extends Component {
   static async getInitialProps(props) {
+    //to catch the address from url
+    //this function Campaign is imported from ethereum campaign.js
+    //this will return instance of contract
     const campaign = Campaign(props.query.address);
 
     const summary = await campaign.methods.getSummary().call();

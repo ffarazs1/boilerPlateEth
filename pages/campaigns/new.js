@@ -6,6 +6,8 @@ import web3 from "../../ethereum/web3";
 import { Router } from "../../routes";
 
 class CampaignNew extends Component {
+  //better to add states to save the input of the user
+  //like here minimumContribution
   state = {
     minimumContribution: "",
     errorMessage: "",

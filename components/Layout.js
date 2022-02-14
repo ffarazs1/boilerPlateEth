@@ -7,13 +7,15 @@ const Layout = (props) => {
   return (
     <div>
       <Container>
+        {/*To add in head tag*/}
         <Head>
           <link
             rel="stylesheet"
-            href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css"
+            href="//cdn.jsdelivr.net/npm/semantic-ui@2/dist/semantic.min.css"
           ></link>
         </Head>
         <Header />
+        {/*To show everything inside layout*/}
         {props.children}
       </Container>
     </div>
