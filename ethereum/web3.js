@@ -2,6 +2,8 @@ import Web3 from "web3";
 
 let web3;
 
+// first one is for next as next runs in server and cant find window
+// second is for browser and metamask
 if (typeof window !== "undefined" && typeof window.ethereum !== "undefined") {
   // We are in the browser and metamask is running.
   window.ethereum.request({ method: "eth_requestAccounts" });
